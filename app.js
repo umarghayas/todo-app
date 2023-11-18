@@ -26,6 +26,7 @@ function addNote() {
     var edBtn = document.createElement("a")
     var delBtn = document.createElement("a")
     edBtn.className = "btn btn-primary me-2"
+    edBtn.setAttribute("onclick", "editNote(this)")
     delBtn.setAttribute("onclick", "deleteNote(this)")
     delBtn.className = "btn btn-danger"
     var editBtnText = document.createTextNode("Edit ")
@@ -38,11 +39,16 @@ function addNote() {
     delBtn.append(delBtnText,delSym)
     cardFooterDiv.append(edBtn,delBtn)
     
-
+    note.value = "";
     parent.append(cardDiv)
     // console.log(cardDiv)
 }
 
 function deleteNote(ele){
-    ele.parentNode.parentNode.remove()
+    ele.parentNode.parentNode.remove();
+}
+
+function editNote(ele){
+    var editValue = prompt("Enter the edited Note", ele.parentNode.previousElementSibling.firstElementChild.innerHTML)
+    ele.parentNode.previousElementSibling.firstElementChild.innerHTML = editValue;
 }
