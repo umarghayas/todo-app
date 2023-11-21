@@ -1,6 +1,6 @@
-html{
+/* html{
     min-height: 100%;
-}
+} */
 
 .bg-user {
     background: #0F2027;
@@ -9,7 +9,7 @@ html{
 }
 .custom-bg{
     background-color: #87bbba;
-}
+}   
 .custom-border{
     border: 2px solid black !important;
     /* border-radius: 15px !important; */

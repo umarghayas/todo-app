@@ -11,36 +11,40 @@
     <script src="https://kit.fontawesome.com/163b18ae49.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="bg-user">
     <!-- <div>
         <h1>Hello World</h1>
     </div> -->
-    <div class="bg-user vh-100 ">
+    <div class="">
         <section class="bg-dark text-white text-center border-bottom border-info p-2">
             <h1 class="text-info">To-Do List</h1>
         </section>
         <!-- Enter Notes Body -->
-        <section class="container font-monospace" id="parent">
+        <section class="container font-monospace" id="">
             <div class="my-4 card custom-border">
                 <div class="card-body bg-dark text-white">
                     <label for="formInput" class="form-label fw-bold">
                         <h4>Notes</h4>
                     </label>
-                    <input type="text" class="form-control bg-dark input-field text-white" id="note" placeholder="Add a note..." />
-                    <button type="button" class="btn btn-info mt-2" onclick="addNote()">Add</button>
-                    <button type="button" class="btn btn-danger mt-2" onclick="deleteAll()">Delete All</button>
+                    <input type="text" class="form-control bg-dark input-field text-white" id="note"
+                        placeholder="Add a note..." />
+                    <button type="button" class="btn btn-info mt-2" onclick="addNote()">Add <i class="fa-solid fa-plus"></i></button>
+                    <button type="button" class="btn btn-danger mt-2" onclick="deleteAll()">Delete All <i class="fa-solid fa-trash"></i></button>
                 </div>
             </div>
-            <!-- <div class="card mt-2">
-                <h5 class="card-header text-white bg-black bg-opacity-75">Note # </h5>
-                <div class="card-body bg-dark text-white">
-                    <h5 class="card-title">Here comes the note</h5>
-                </div>
-                <div class="card-footer bg-black bg-opacity-75">
-                    <a class="btn btn-primary">Edit <i class="fa-solid fa-pen fa-xs"></i></a>
-                    <a class="btn btn-danger">Delete <i class="fa-regular fa-trash-can"></i></a>
-                </div>
-            </div> -->
+            <div id="parent">
+                <!-- <div class="card mt-2">
+                    <h5 class="card-header text-white bg-black bg-opacity-75">Note</h5>
+                    <div class="card-body bg-dark text-white">
+                        <h5 class="card-title">Here comes the note</h5>
+                        <input type="text" name="editText" class="form-control bg-dark input-field text-white" id="edit" placeholder="ele.parentNode.previousElementSibling.firstElementChild.innerHTML">
+                    </div>
+                    <div class="card-footer bg-black bg-opacity-75">
+                        <a class="btn btn-primary" onclick="editNote(this)">Edit <i class="fa-solid fa-pen fa-xs"></i></a>
+                        <a class="btn btn-danger" onclick="DeleteNote(this)">Delete <i class="fa-regular fa-trash-can"></i></a>
+                    </div>
+                </div> -->
+            </div>
         </section>
     </div>
 </body>
